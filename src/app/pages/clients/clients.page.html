@@ -2,12 +2,12 @@
   <ion-toolbar>
     <ion-title>Clients List</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button defaultHref="/tabs/clients"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-list>
     <ion-item *ngFor="let client of clients">
       <ion-label class="element-label">
