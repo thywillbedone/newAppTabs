@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="Back" defaultHref="/"></ion-back-button>
+      <ion-back-button color="success" text="Back" defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Edit Client</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/">
+        <ion-icon color="success" name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="primary">Edit Client</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button tab="reservations" routerLink="/">
-    <ion-icon name="bag-check-outline"></ion-icon>
-    <ion-label>Reservations</ion-label>
-  </ion-button>
-</ion-content>
+<ion-content></ion-content>

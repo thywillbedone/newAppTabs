@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Products List</ion-title>
-    <ion-buttons slot="start"> 
-      <ion-back-button text="Back" defaultHref="/tabs/products"></ion-back-button> 
+    <ion-title color="primary">Products List</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="success" text="Back" defaultHref="/tabs/products"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-item *ngFor="let product of products">
-    <ion-card-header>{{product.title}}</ion-card-header>
-    <ion-card-content>{{product.description}}</ion-card-content>
-  </ion-item>
+  <ion-card *ngFor="let product of products">
+    <ion-card-header color="secondary">{{product.title}}</ion-card-header>
+    <ion-card-content color="terciary">{{product.description}}</ion-card-content>
+  </ion-card>
 </ion-content>

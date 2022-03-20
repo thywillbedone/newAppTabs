@@ -1,16 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Reservations List</ion-title>
-    <ion-buttons slot="start"> 
-      <ion-back-button text="Back" defaultHref="/tabs/reservations"></ion-back-button> 
+    <ion-title color="primary">Reservations List</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="success" text="Back" defaultHref="/tabs/reservations"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list> 
-    <ion-item *ngFor="let reservation of reservations"> 
-      <ion-label class="element-label">{{reservation.date}}</ion-label> 
+  <ion-list>
+    <ion-item *ngFor="let reservation of reservations">
+      <ion-label color="secondary" class="element-label">{{reservation.date}}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
