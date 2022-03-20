@@ -9,44 +9,54 @@ const routes: Routes = [
     children: [
       {
         path: 'clients',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () =>
+          import('../tab1/tab1.module').then((m) => m.Tab1PageModule),
       },
       {
         path: 'reservations',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        loadChildren: () =>
+          import('../tab2/tab2.module').then((m) => m.Tab2PageModule),
       },
       {
         path: 'products',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () =>
+          import('../tab3/tab3.module').then((m) => m.Tab3PageModule),
       },
       {
         path: 'reservations/details',
-        loadChildren: () => import('../pages/reservations/reservations.module').then( m => m.ReservationsPageModule)
+        loadChildren: () =>
+          import('../pages/reservations/reservations.module').then(
+            (m) => m.ReservationsPageModule
+          ),
       },
       {
         path: 'clients/details',
-        loadChildren: () => import('../pages/clients/clients.module').then( m => m.ClientsPageModule)
+        loadChildren: () =>
+          import('../pages/clients/clients.module').then(
+            (m) => m.ClientsPageModule
+          ),
       },
       {
         path: 'products/details',
-        loadChildren: () => import('../pages/products/products.module').then( m => m.ProductsPageModule)
+        loadChildren: () =>
+          import('../pages/products/products.module').then(
+            (m) => m.ProductsPageModule
+          ),
       },
       {
         path: 'clients/details/:id',
-        loadChildren: () => import('../pages/clients/edit/edit.module').then( m => m.EditPageModule)
+        loadChildren: () =>
+          import('../pages/clients/edit/edit.module').then(
+            (m) => m.EditPageModule
+          ),
       },
-      {
-        path: '',
-        redirectTo: '/tabs/reservations',
-        pathMatch: 'full'
-      }
-    ]
+    ],
   },
   {
     path: '',
     redirectTo: '/tabs/reservations',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
