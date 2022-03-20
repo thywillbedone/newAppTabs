@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-clients',
@@ -31,7 +32,11 @@ export class ClientsPage implements OnInit {
     },
   ];
 
-  constructor() {}
+  args = "";
 
-  ngOnInit() {}
+  constructor(private activateRoute: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.args = this.activateRoute.snapshot.paramMap.get("id");
+  }
 }

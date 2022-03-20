@@ -14,7 +14,7 @@ export class ExploreContainerComponent implements OnInit {
   ngOnInit() {}
 
   navigate() {
-    switch (this.name) {
+    switch (this.name.toLowerCase()) {
       case 'reservations':
         this.router.navigateByUrl('/reservations');
         break;
