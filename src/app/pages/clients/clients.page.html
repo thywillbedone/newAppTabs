@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>Clients List</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button text="Back" defaultHref="/tabs/clients"></ion-back-button>
+      <ion-back-button text="Back" defaultHref="/tabs/clients/"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -12,8 +12,8 @@
     <ion-item *ngFor="let client of clients">
       <ion-label class="element-label">
         <h4>{{client.name}}</h4>
-        <ion-button [routerLink]="['/clients', client.id]">Edit</ion-button>
       </ion-label>
+      <ion-button [routerLink]="['/tabs/clients/details/', client.id]">Edit</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -5,23 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
-    path: 'reservations',
-    loadChildren: () => import('./pages/reservations/reservations.module').then( m => m.ReservationsPageModule)
-  },
-  {
-    path: 'clients',
-    loadChildren: () => import('./pages/clients/clients.module').then( m => m.ClientsPageModule)
-  },
-  {
-    path: 'clients/:id',
-    loadChildren: () => import('./pages/clients/edit/edit.module').then( m => m.EditPageModule)
-  },
-  {
-    path: 'products',
-    loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
-  },
+  }
 ];
 @NgModule({
   imports: [

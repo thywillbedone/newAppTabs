@@ -1,3 +1,4 @@
+import { getLocaleTimeFormat } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,19 +14,7 @@ export class ExploreContainerComponent implements OnInit {
 
   ngOnInit() {}
 
-  navigate() {
-    switch (this.name.toLowerCase()) {
-      case 'reservations':
-        this.router.navigateByUrl('/reservations');
-        break;
-      case 'clients':
-        this.router.navigateByUrl('/clients');
-        break;
-      case 'products':
-        this.router.navigateByUrl('/products');
-        break;
-      default:
-        break;
-    }
+  goTo() {
+    this.router.navigateByUrl('tabs/' + this.name.toLowerCase() + '/details');
   }
 }
