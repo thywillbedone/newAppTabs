@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./clients.page.scss'],
 })
 export class ClientsPage implements OnInit {
-  clients: any[]= [
+  clients: any[] = [
     {
       id: 1,
       name: 'Leanne Graham',
@@ -32,11 +32,7 @@ export class ClientsPage implements OnInit {
     },
   ];
 
-  args = "";
+  constructor() {}
 
-  constructor(private activateRoute: ActivatedRoute) {}
-
-  ngOnInit() {
-    this.args = this.activateRoute.snapshot.paramMap.get("id");
-  }
+  ngOnInit() {}
 }
