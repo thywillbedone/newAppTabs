@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>products</ion-title>
+    <ion-title>Products List</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-item *ngFor="let product of products">
+    <ion-card-header>{{product.title}}</ion-card-header>
+    <ion-card-content>{{product.description}}</ion-card-content>
+  </ion-item>
 </ion-content>

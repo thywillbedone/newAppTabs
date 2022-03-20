@@ -9,20 +9,20 @@ import { Router } from '@angular/router';
 export class ExploreContainerComponent implements OnInit {
   @Input() name: string;
 
-  constructor(private route: Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
   navigate() {
     switch (this.name) {
       case 'reservations':
-        this.route.navigateByUrl('/reservations');
+        this.router.navigateByUrl('/reservations');
         break;
       case 'clients':
-        this.route.navigateByUrl('/clients');
+        this.router.navigateByUrl('/clients');
         break;
       case 'products':
-        this.route.navigateByUrl('/products');
+        this.router.navigateByUrl('/products');
         break;
       default:
         break;
