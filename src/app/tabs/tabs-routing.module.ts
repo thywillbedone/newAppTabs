@@ -57,6 +57,11 @@ const routes: Routes = [
     redirectTo: '/tabs/reservations',
     pathMatch: 'full',
   },
+  {
+    path: '**',
+    loadChildren: () => import('../pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
+  }
+  
 ];
 
 @NgModule({
