@@ -32,4 +32,9 @@ describe('EditPage', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should have Edit Client as title', () => {
+    de = fixture.debugElement.query(By.css('ion-title'));
+    el = de.nativeElement;
+    expect(el.textContent).toEqual('Edit Client');
+  });
 });
