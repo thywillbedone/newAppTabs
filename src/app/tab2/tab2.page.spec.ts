@@ -31,9 +31,15 @@ describe('Tab2Page', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have Reservations as title', () => {
+  it('should have Reservations as page title', () => {
     de = fixture.debugElement;
     el = de.nativeElement.querySelector('ion-title');
+    expect(el.textContent.trim()).toEqual('Reservations');
+  });
+
+  it('should have a Reservations button', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('ion-button');
     expect(el.textContent.trim()).toEqual('Reservations');
   });
 });

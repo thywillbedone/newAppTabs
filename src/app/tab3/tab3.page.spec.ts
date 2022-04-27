@@ -31,9 +31,15 @@ describe('Tab3Page', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have Products as title', () => {
+  it('should have Products as page title', () => {
     de = fixture.debugElement;
     el = de.nativeElement.querySelector('ion-title');
+    expect(el.textContent.trim()).toEqual('Products');
+  });
+
+  it('should have a Products button', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('ion-button');
     expect(el.textContent.trim()).toEqual('Products');
   });
 });

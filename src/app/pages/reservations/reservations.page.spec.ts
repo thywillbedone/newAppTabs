@@ -36,7 +36,7 @@ describe('ReservationsPage', () => {
     expect(component.reservations).toHaveSize(3);
   });
 
-  it('should have a label with the reservation\'s date', () => {
+  it("should have a label with the reservation's date", () => {
     de = fixture.debugElement;
     el = de.nativeElement.querySelector('ion-label');
     expect(el.textContent).toEqual('2020-03-02T00:00:02.000Z');

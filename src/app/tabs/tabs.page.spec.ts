@@ -32,4 +32,21 @@ describe('TabsPage', () => {
     expect(el).toHaveSize(3);
   });
 
+  it('should have a clients alike icon', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('#clients');
+    expect(el.getAttribute('name')).toEqual('people-outline');
+  });
+
+  it('should have a reservations alike icon', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('#reservations');
+    expect(el.getAttribute('name')).toEqual('bag-check-outline');
+  });
+
+  it('should have a products alike icon', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('#products');
+    expect(el.getAttribute('name')).toEqual('cart-outline');
+  });
 });

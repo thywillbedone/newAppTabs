@@ -36,4 +36,10 @@ describe('Tab1Page', () => {
     el = de.nativeElement.querySelector('ion-title');
     expect(el.textContent.trim()).toEqual('Clients');
   });
+
+  it('should have a Clients button', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('ion-button');
+    expect(el.textContent.trim()).toEqual('Clients');
+  });
 });
