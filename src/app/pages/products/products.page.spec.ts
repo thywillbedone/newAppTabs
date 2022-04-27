@@ -36,7 +36,7 @@ describe('ProductsPage', () => {
     expect(component.products).toHaveSize(3);
   });
 
-  it('should have a card header with the name of the product', () => {
+  it('should have a card header with the product\'s name', () => {
     de = fixture.debugElement;
     el = de.nativeElement.querySelector('ion-card-header');
     expect(el.textContent).toEqual('Opna Women\'s Short Sleeve Moisture');

@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TabsPage } from './tabs.page';
@@ -6,6 +6,8 @@ import { TabsPage } from './tabs.page';
 describe('TabsPage', () => {
   let component: TabsPage;
   let fixture: ComponentFixture<TabsPage>;
+  let de: DebugElement;
+  let el: HTMLElement;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -23,4 +25,11 @@ describe('TabsPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have 3 tab buttons', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelectorAll('ion-tab-button');
+    expect(el).toHaveSize(3);
+  });
+
 });

@@ -1,3 +1,4 @@
+import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { IonicModule } from '@ionic/angular';
@@ -8,6 +9,8 @@ import { Tab3Page } from './tab3.page';
 describe('Tab3Page', () => {
   let component: Tab3Page;
   let fixture: ComponentFixture<Tab3Page>;
+  let de: DebugElement;
+  let el: HTMLElement;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -26,5 +29,11 @@ describe('Tab3Page', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have Products as title', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('ion-title');
+    expect(el.textContent.trim()).toEqual('Products');
   });
 });

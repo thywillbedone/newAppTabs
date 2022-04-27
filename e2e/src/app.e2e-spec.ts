@@ -7,8 +7,13 @@ describe('new App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should navigate to Reservations', () => {
     page.navigateTo();
     expect(page.getPageTitle()).toContain('Reservations');
+  });
+
+  it('should navigate to Reservations url', () => {
+    page.navigateTo();
+    expect(page.getPageUrl()).toContain('/tabs/reservations');
   });
 });
