@@ -39,7 +39,25 @@ describe('Tab3Page', () => {
 
   it('should have a Products button', () => {
     de = fixture.debugElement;
-    el = de.nativeElement.querySelector('ion-button');
+    el = de.nativeElement.querySelector('#page-btn');
     expect(el.textContent.trim()).toEqual('Products');
+  });
+
+  it('should load the Products button centered', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('#page-btn');
+    //Find the center of the DOM
+    let centerX = document.documentElement.clientWidth / 2;
+    let centerY = document.documentElement.clientHeight / 2;
+    //Get the node in the center
+    let elem = document.elementFromPoint(centerX, centerY);
+
+    //Assert the button and the element in the center have the same DOM position
+    /** https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition
+     * if elem is located earlier in the document and contains the node on which
+     *  compareDocumentPosition() was called, then both the DOCUMENT_POSITION_CONTAINS
+     *  and DOCUMENT_POSITION_PRECEDING bits would be set, producing a value of 10 (0x0A)
+     * */
+    expect(el.compareDocumentPosition(elem)).toBe(10);
   });
 });

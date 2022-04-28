@@ -16,14 +16,16 @@ describe('e2e Tests', () => {
 
   it('should open a new page Reservations List', () => {
     page.navigateTo('/');
-    const reservationsTabBtn = element(by.id('tab-button-reservations'));
-    const reservationsBtn = element(
+    const reservationsTabBtn = browser.findElement(
+      by.id('tab-button-reservations')
+    );
+
+    reservationsTabBtn.click();
+    const reservationsBtn = browser.findElement(
       by.xpath(
-        "//app-explore-container[@name='Reservations']/child::div/ion-button"
+        "//app-explore-container[@name='Reservations']/child::div[@id='container']/ion-button"
       )
     );
-    reservationsTabBtn.click();
-    browser.wait(ExpectedConditions.elementToBeClickable(reservationsBtn));
     reservationsBtn.click();
     browser.wait(ExpectedConditions.urlContains('/reservations/details'), 10);
     expect(element(by.id('reservations-list')).getText()).toContain(
@@ -35,7 +37,7 @@ describe('e2e Tests', () => {
     page.navigateTo('/');
     const clientsTabBtn = element(by.id('tab-button-clients'));
     const clientsBtn = element(
-      by.xpath("//app-explore-container[@name='Clients']/child::div/ion-button")
+      by.xpath("//app-explore-container[@name='Clients']/child::div[@id='container']/ion-button")
     );
     clientsTabBtn.click();
     browser.wait(ExpectedConditions.elementToBeClickable(clientsBtn));
@@ -49,7 +51,7 @@ describe('e2e Tests', () => {
     const productsTabBtn = element(by.id('tab-button-products'));
     const productsBtn = element(
       by.xpath(
-        "//app-explore-container[@name='Products']/child::div/ion-button"
+        "//app-explore-container[@name='Products']/child::div[@id='container']/ion-button"
       )
     );
     productsTabBtn.click();
@@ -60,4 +62,5 @@ describe('e2e Tests', () => {
       'Products List'
     );
   });
+
 });
