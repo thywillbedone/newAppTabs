@@ -37,4 +37,16 @@ describe('EditPage', () => {
     el = de.nativeElement;
     expect(el.textContent).toEqual('Edit Client');
   });
+
+  it('should have a back button', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('ion-back-button');
+    expect(el.getAttribute('text')).toEqual('Back');
+  });
+
+  it('should have a home button', () => {
+    de = fixture.debugElement;
+    el = de.nativeElement.querySelector('ion-button');
+    expect(el.getAttribute('routerlink')).toEqual('/');
+  });
 });
