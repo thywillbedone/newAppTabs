@@ -109,6 +109,7 @@ describe('e2e Tests', () => {
         "//ion-button[@ng-reflect-router-link='/tabs/clients/details/,2']"
       )
     );
+    //navigate to Edit Clients page
     editBtn2.click();
     browser.wait(ExpectedConditions.urlContains('/details/2'), 60);
     const backBtn = element(by.id('back-home'));

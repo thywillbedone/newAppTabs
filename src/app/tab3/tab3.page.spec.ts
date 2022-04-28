@@ -53,6 +53,7 @@ describe('Tab3Page', () => {
     let elem = document.elementFromPoint(centerX, centerY);
 
     //Assert the button and the element in the center have the same DOM position
+    
     /** https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition
      * if elem is located earlier in the document and contains the node on which
      *  compareDocumentPosition() was called, then both the DOCUMENT_POSITION_CONTAINS
